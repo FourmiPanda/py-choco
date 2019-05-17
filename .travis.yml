@@ -7,3 +7,8 @@ notifications:
       - ceuterickx.gaetan@gmail.com
     on_success: always
     on_failure: always
+addons:
+  sonarcloud:
+    organization: "fourmipanda-github"
+    token:
+      secure: "56bce8dff72259a035befdac40f0a88a9d2d04e3"
