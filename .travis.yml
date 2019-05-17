@@ -10,8 +10,11 @@ notifications:
       - ceuterickx.gaetan@gmail.com
     on_success: always
     on_failure: always
-# command to run tests
-script: pytest
+
+script:
+  - pytest
+  - sonar-scanner
+
 addons:
   sonarcloud:
     organization: "fourmipanda-github"
