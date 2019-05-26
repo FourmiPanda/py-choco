@@ -19,7 +19,7 @@ class BasicTestModel(unittest.TestCase):
         my_model.arithm(x, '+', y, '<', 5)
         my_model.times(x, y, 4)
         my_model.solve()
-        self.assertEquals('simple problem', 'simple problem')
+        self.assertEquals((2, 2), (x.getValue(), y.getValue()))
 
 
 if __name__ == '__main__':
