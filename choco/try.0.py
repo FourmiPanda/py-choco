@@ -2,6 +2,7 @@
 
 from jnius import autoclass
 
+
 # EXAMPLE - java.util.Stack
 
 # Stack = autoclass('java.util.Stack')
@@ -36,4 +37,5 @@ model.getSolver().solve()
 # PRINT THE SOLUTION
 print(x.getValue())
 print(y.getValue())
+
 
