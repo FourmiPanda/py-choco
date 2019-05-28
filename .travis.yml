@@ -10,11 +10,12 @@ notifications:
       - ceuterickx.gaetan@gmail.com
     on_success: always
     on_failure: always
-
 script:
   - pytest
   - sonar-scanner
 
+install:
+  - pip install -r requirements.txt
 addons:
   sonarcloud:
     organization: "fourmipanda-github"
