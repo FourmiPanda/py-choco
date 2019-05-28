@@ -1,6 +1,6 @@
 from jnius import autoclass
 
-from . import intvar
+# from . import intvar
 
 class Model(object):
 
@@ -10,6 +10,14 @@ class Model(object):
 
     def intVar(self, name, lb, ub):
         return self.model.intVar(name, lb, ub)
+
+    def boolVar(self, name, val):
+        if val==True:
+            return self.model.intVar(name,1,1)
+        elif val==False:
+            return self.model.intVar(name,0,0)
+        else:
+            raise SyntaxError ("boolean expected")
 
     def arithm(self, var1, op1, var2, op2, cste):
         self.model.arithm(var1, op1, var2, op2, cste).post()
