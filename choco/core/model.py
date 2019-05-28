@@ -13,9 +13,11 @@ class Model(object):
 
     def arithm(self, var1, op1, var2, op2, cste):
         self.model.arithm(var1, op1, var2, op2, cste).post()
+        return self
 
     def times(self, var1, var2, equ):
         self.model.times(var1, var2, equ).post()
+        return self
 
     def solve(self):
         self.model.getSolver().solve()
