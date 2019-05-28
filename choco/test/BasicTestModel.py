@@ -21,6 +21,13 @@ class BasicTestModel(unittest.TestCase):
         my_model.solve()
         self.assertEquals((2, 2), (x.getValue(), y.getValue()))
 
+    def test_model_bool_problem(self):
+        my_model = core.model.Model('bool problem')
+        x = my_model.boolVar('x',False)
+        y = my_model.boolVar('y',True)
+        #z = my_model.boolVar('z',3)
+        print(x.getValue(),y.getValue())
+
 
 if __name__ == '__main__':
     unittest.main()

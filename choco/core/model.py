@@ -23,3 +23,11 @@ class Model(object):
     def __init__(self, name):
         Mod = autoclass('org.chocosolver.solver.Model')
         self.model = Mod(name)
+
+    def boolVar(self, name,val):
+        if val==True:
+            return self.model.intVar(name,1,1)
+        elif val==False:
+            return self.model.intVar(name,0,0)
+        else:
+            raise SyntaxError ("boolean expected")
