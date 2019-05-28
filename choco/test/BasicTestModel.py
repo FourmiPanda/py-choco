@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from .context import core
+from context import core
 
 import unittest
 
@@ -25,8 +25,18 @@ class BasicTestModel(unittest.TestCase):
         my_model = core.model.Model('bool problem')
         x = my_model.boolVar('x',False)
         y = my_model.boolVar('y',True)
-        #z = my_model.boolVar('z',3)
-        print(x.getValue(),y.getValue())
+        self.assertEquals((0, 1), (x.getValue(), y.getValue()))
+        
+
+    def test_model_bool_error(self):
+        my_model = core.model.Model('bool problem')
+        raised = False
+        try:
+            z=my_model.boolVar('z',3)
+        except SyntaxError:
+             # A syntax error was generated during the affectation...
+            raised = True
+        self.assert_(raised, "'boolean expected' failed to raise a SyntaxError.")
 
 
 if __name__ == '__main__':
