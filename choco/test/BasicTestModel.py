@@ -20,7 +20,16 @@ class BasicTestModel(unittest.TestCase):
         my_model.times(x, y, 4)
         my_model.solve()
         self.assertEquals((2, 2), (x.getValue(), y.getValue()))
-
+    
+    def test_model_list_problem(self):
+        my_model = core.model.Model('list problem')
+        x = my_model.intVarl('X', {0,1,2,3,4})
+        y = my_model.intVarl('Y', {1,2,3,4,5,6,7,8})
+        my_model.arithm(x, '+', y, '<', 5)
+        my_model.times(x, y, 4)
+        my_model.solve()
+        self.assertEquals((2, 2), (x.getValue(), y.getValue()))
+   
     def test_model_bool_problem(self):
         my_model = core.model.Model('bool problem')
         x = my_model.boolVar('x',False)

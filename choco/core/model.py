@@ -11,6 +11,15 @@ class Model(object):
     def intVar(self, name, lb, ub):
         return self.model.intVar(name, lb, ub)
 
+    def intVarl(self, name, l):
+        return self.model.intVar(name,l)
+        """
+        liste=[]
+        for i in range(0,l.len-1):
+            liste[i]=self.model.intVar(name, l[i], l[i])
+        return liste
+        """
+
     def arithm(self, var1, op1, var2, op2, cste):
         self.model.arithm(var1, op1, var2, op2, cste).post()
 
