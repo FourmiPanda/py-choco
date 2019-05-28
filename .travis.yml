@@ -11,6 +11,10 @@ notifications:
     on_success: always
     on_failure: always
 
+install:
+  - pip install -r requirements.txt
+  - pip install .
+
 script:
   - python -m test.BasicTestModel
   # - sonar-scanner
