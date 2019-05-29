@@ -30,6 +30,9 @@ class Model(object):
     def solve(self):
         self.model.getSolver().solve()
 
+    def printStatistics(self):
+        self.model.getSolver().printStatistics()
+
     def __init__(self, name):
         Mod = autoclass('org.chocosolver.solver.Model')
         self.model = Mod(name)
