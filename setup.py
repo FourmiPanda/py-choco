@@ -8,6 +8,7 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 # This call to setup() does all the work
+
 setup(
     name="py-choco",
     version="1.0.0",
