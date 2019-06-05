@@ -16,7 +16,7 @@ notifications:
 #   - pip install .
 
 # script:
-#   - python -m test.BasicTestModel
+#   - python -m tests.BasicTestModel
   # - sonar-scanner
 
 addons:
