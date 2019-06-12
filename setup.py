@@ -8,7 +8,6 @@ HERE = pathlib.Path(__file__).parent
 README = (HERE / "README.md").read_text()
 
 # This call to setup() does all the work
-
 setup(
     name="py-choco",
     version="1.0.0",
@@ -17,19 +16,19 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/FourmiPanda/py-choco",
     author="FourmiPanda;PauluxDelux;tigerIonic",
-    author_email="example@email.example",
+    author_email="paul.bavazzano@imt-atlantique.net",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 2.7",
     ],
-    #   packages=["reader"],
-    packages=find_packages(exclude=("tests",)),
-    #   include_package_data=True,
-    #   install_requires=["feedparser", "html2text"],
+    packages=["core"],
+    # packages=find_packages(exclude=("tests",)),
+    include_package_data=True,
+    install_requires=["pyjnius"],
     entry_points={
         "console_scripts": [
-            "pychoco=choco.__main__:main",
+            "realpython=choco.__main__:main",
         ]
     },
 )
