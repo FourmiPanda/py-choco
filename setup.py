@@ -10,8 +10,8 @@ HERE = pathlib.Path(__file__).parent
 
 # This call to setup() does all the work
 setup(
-    name="PyChoco-demo",
-    version="1.0.0",
+    name="PyChoco",
+    version="1.0.4",
     description="A python adapter for choco-solver",
     long_description="README",
     long_description_content_type="text/markdown",
@@ -26,7 +26,7 @@ setup(
     packages=["choco/core"],
     # packages=find_packages(exclude=("tests",)),
     include_package_data=True,
-    install_requires=["pyjnius"],
+    install_requires=["pyjnius", "Cython"],
     entry_points={
         "console_scripts": [
             "realpython=choco.__main__:main",
