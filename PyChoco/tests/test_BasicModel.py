@@ -12,12 +12,12 @@ from context import core
 # class BasicTestModel(unittest.TestCase):
 #     """Basic tests cases for Model class"""
 
-def test_model_name(self):
+def test_model_name():
     my_model = core.model.Model('model name')
     # self.assertEqual('model name', my_model.getName())
     assert 'model name' == my_model.getName()
 
-def test_model_simple_problem(self):
+def test_model_simple_problem():
     my_model = core.model.Model('simple problem')
     x = my_model.intVar('X', 0, 4)
     y = my_model.intVar('Y', 1, 8)
@@ -26,7 +26,7 @@ def test_model_simple_problem(self):
     # self.assertEquals((2, 2), (x.getValue(), y.getValue()))
     assert (2, 2) == (x.getValue(), y.getValue())
 
-def test_model_bool_error(self):
+def test_model_bool_error():
     my_model = core.model.Model('bool problem')
     raised = False
     try:
