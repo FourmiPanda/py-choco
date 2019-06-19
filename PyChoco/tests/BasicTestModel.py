@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from .context import core
+from context import core
 
 import unittest
 

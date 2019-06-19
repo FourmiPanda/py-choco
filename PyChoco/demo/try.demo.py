@@ -1,5 +1,5 @@
 import core.model as m
-
+"""
 my_model = m.Model('simple problem')
 
 x = my_model.intVar('X', 0, 4)
@@ -22,4 +22,3 @@ my_model2.printStatistics()
 
 print('X -> ' + str(x2.getValue()))
 print('Y -> ' + str(y2.getValue()))
-"""
