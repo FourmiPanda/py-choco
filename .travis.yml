@@ -29,6 +29,3 @@ deploy:
   user: "$TWINE_USERNAME"
   password: "$TWINE_PASSWORD"
   distributions: "bdist_wheel"
-
-after_deploy:
-  - echo "DEPLOYED !!!"
