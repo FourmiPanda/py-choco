@@ -1,9 +1,11 @@
 dist: xenial   # required for Python >= 3.7
 
-language: python
-
-python:
-  - "3.7"
+matrix:
+  include:
+    - language: python
+      python: "3.7"
+    - language: java
+      jdk: oraclejdk8
 
 notifications:
   email:
