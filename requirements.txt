@@ -1,3 +1,2 @@
-Cython
 pyjnius
 pytest

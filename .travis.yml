@@ -11,13 +11,13 @@ notifications:
     on_success: always
     on_failure: always
 
-# install:
-#   - pip install -r requirements.txt
-#   - pip install .
-
 # script:
 #   - python -m tests.BasicTestModel
-  # - sonar-scanner
+#   - sonar-scanner
+
+before_install:
+  - pip install Cython
+  - pip install -r requirements.txt
 
 addons:
   sonarcloud:
