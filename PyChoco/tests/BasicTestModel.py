@@ -32,5 +32,5 @@ class BasicTestModel(unittest.TestCase):
         assert raised, "'boolean expected' failed to raise a SyntaxError."
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+#     pytest.main()
