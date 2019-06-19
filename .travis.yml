@@ -18,7 +18,8 @@ script: pytest
 
 before_install:
   - pip install Cython
-  - pip install -r requirements.txt
+  - pip install pyjnius
+  - pip install pytest
 
 before_deploy:
   - pip install wheel
