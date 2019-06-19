@@ -1,7 +1,10 @@
 dist: xenial   # required for Python >= 3.7
+
 language: python
+
 python:
   - "3.7"
+
 notifications:
   email:
     recipients:
@@ -11,29 +14,21 @@ notifications:
     on_success: always
     on_failure: always
 
-# script:
-#   - python -m tests.BasicTestModel
-#   - sonar-scanner
-
 before_install:
   - pip install Cython
   - pip install -r requirements.txt
-
-addons:
-  sonarcloud:
-    organization: "fourmipanda-github"
-    token:
-      secure: "56bce8dff72259a035befdac40f0a88a9d2d04e3"
 
 before_deploy:
   - pip install wheel
   - pip install twine
   - rm dist/**
+
 deploy:
   provider: pypi
   server: https://testpypi.python.org/pypi
   user: "$TWINE_USERNAME"
   password: "$TWINE_PASSWORD"
   distributions: "bdist_wheel"
+
 after_deploy:
   - echo "DEPLOYED !!!"
