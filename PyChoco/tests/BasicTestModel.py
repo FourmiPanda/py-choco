@@ -6,7 +6,7 @@ import unittest
 
 
 class BasicTestModel(unittest.TestCase):
-    """Basic test cases for Model class"""
+    """Basic tests cases for Model class"""
 
     def test_model_name(self):
         my_model = core.model.Model('model name')
