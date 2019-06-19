@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from context import core
-
+import unittest
 
 class BasicTestModel(unittest.TestCase):
     """Basic tests cases for Model class"""
