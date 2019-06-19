@@ -23,7 +23,8 @@ before_install:
 before_deploy:
   - pip install wheel
   - pip install twine
-  - rm dist/**
+  - python setup.py sdist bdist_wheel
+  - twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 deploy:
   provider: pypi
