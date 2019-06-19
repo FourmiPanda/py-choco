@@ -11,7 +11,7 @@ notifications:
       - paul.bavazzano@gmail.com
       - elkhantache.ismael@gmail.com
       - ceuterickx.gaetan@gmail.com
-    on_success: always
+    on_success: never
     on_failure: always
 
 script: pytest tests/
