@@ -14,7 +14,7 @@ notifications:
     on_success: always
     on_failure: always
 
-script: pytest
+script: pytest tests/
 
 before_install:
   - pip install Cython
