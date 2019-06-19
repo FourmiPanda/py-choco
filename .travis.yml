@@ -24,3 +24,16 @@ addons:
     organization: "fourmipanda-github"
     token:
       secure: "56bce8dff72259a035befdac40f0a88a9d2d04e3"
+
+before_deploy:
+  - pip install wheel
+  - pip install twine
+  - rm dist/**
+deploy:
+  provider: pypi
+  server: https://testpypi.python.org/pypi
+  user: "$TWINE_USERNAME"
+  password: "$TWINE_PASSWORD"
+  distributions: "bdist_wheel"
+after_deploy:
+  - echo "DEPLOYED !!!"
