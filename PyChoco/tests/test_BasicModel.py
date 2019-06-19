@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from context import core
+#from context import core
+
+import PyChoco.core.model as m
 
 # from pytest import fixture
 # import unittest
@@ -13,12 +15,12 @@ from context import core
 #     """Basic tests cases for Model class"""
 
 def test_model_name():
-    my_model = core.model.Model('model name')
+    my_model = m.Model('model name')
     # self.assertEqual('model name', my_model.getName())
     assert 'model name' == my_model.getName()
 
 def test_model_simple_problem():
-    my_model = core.model.Model('simple problem')
+    my_model = m.Model('simple problem')
     x = my_model.intVar('X', 0, 4)
     y = my_model.intVar('Y', 1, 8)
     my_model.arithm(x, '+', y, '<', 5).times(x, y, 4)
@@ -27,7 +29,7 @@ def test_model_simple_problem():
     assert (2, 2) == (x.getValue(), y.getValue())
 
 def test_model_bool_error():
-    my_model = core.model.Model('bool problem')
+    my_model = m.Model('bool problem')
     raised = False
     try:
         z=my_model.boolVar('z',3)
@@ -35,7 +37,7 @@ def test_model_bool_error():
             # A syntax error was generated during the affectation...
         raised = True
     # self.assert_(raised, "'boolean expected' failed to raise a SyntaxError.")
-    assert raised == "'boolean expected' failed to raise a SyntaxError."
+    assert raised == True
 
 
 # if __name__ == '__main__':
