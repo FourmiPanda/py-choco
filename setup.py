@@ -11,9 +11,9 @@ HERE = pathlib.Path(__file__).parent
 # This call to setup() does all the work
 setup(
     name="PyChoco",
-    version="1.0.12",
+    version="1.0.13",
     description="A python adapter for choco-solver",
-    long_description="README",
+    long_description="README demo",
     long_description_content_type="text/markdown",
     url="https://github.com/FourmiPanda/py-choco",
     author="FourmiPanda;PauluxDelux;tigerIonic",
