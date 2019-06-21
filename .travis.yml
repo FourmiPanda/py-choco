@@ -15,7 +15,7 @@ notifications:
     on_success: never
     on_failure: always
 
-script: pytest PyChoco/tests/
+script: pytest PyChoco/test/
 
 before_install:
   - pip install Cython
