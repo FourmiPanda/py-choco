@@ -11,7 +11,7 @@ HERE = pathlib.Path(__file__).parent
 # This call to setup() does all the work
 setup(
     name="PyChoco",
-    version="1.0.10",
+    version="1.0.11",
     description="A python adapter for choco-solver",
     long_description="README",
     long_description_content_type="text/markdown",
@@ -21,7 +21,7 @@ setup(
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 2.7",
+        "Programming Language :: Python :: 3.7",
     ],
     packages=["PyChoco/core"],
     # packages=find_packages(exclude=("tests",)),
