@@ -20,3 +20,21 @@ Add choco to your classpath
 ```shell
     set CLASSPATH=C:\PATH_TO_CHOCO\choco-4.10.0\choco-solver-4.10.0.jar
 ```
+
+You need to install Cython and Pyjnius. 
+
+```shell
+      pip install Cython
+```
+
+```shell
+      pip install Pyjnius
+```
+
+Pyjnius Documentation
+
+https://pyjnius.readthedocs.io/en/stable/
+
+To install Pyjnius you need to have JDK 8+ and Microsoft Visual C++
+
+https://visualstudio.microsoft.com/downloads/
